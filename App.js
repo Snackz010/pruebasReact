@@ -18,6 +18,7 @@ import {
 } from 'react-native';
 
 import Login from './src/login/loging.js';
+import Home from './src/home/home.js'
 
   class App extends Component {
     constructor(props){
@@ -29,7 +30,6 @@ import Login from './src/login/loging.js';
 
 
     render(){
-
       var  activeView  = this.state.currentView;
       if (activeView == 'Login') {
         return(
@@ -39,16 +39,21 @@ import Login from './src/login/loging.js';
         );
       }else{
         return(
-          <Text>
-            Hola
-          </Text>
+         <Home 
+         press={this.pressEvent}
+         />
         );
       }
     }
 
     pressEvent = ()=> {
+      var actualState = this.state;
+      (actualState.currentView == 'Login')?
       this.setState({
-        currentView:'Home',
+        currentView:'Home'
+      }) :
+      this.setState({
+        currentView:'Login'
       });
     }    
   

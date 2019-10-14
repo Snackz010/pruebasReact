@@ -22,11 +22,11 @@ const Login = (props) => {
             <ImageBackground source={require('../images/loginBgd.jpg')} style={styles.imagebackground}>
                 <View style={styles.innerview}>
                     <Text style={styles.tittle}>
-                        Ingresa tus Datos
+                        Log in
                     </Text>
-                    <TextInput placeholder='Usuario' style={styles.textinputU}></TextInput>
-                    <TextInput placeholder='Contraseña' style={styles.textinputP}></TextInput>
-                    <Button title='Entrar' color='#A7AAB5'
+                    <TextInput placeholder='User' style={styles.textinputU}></TextInput>
+                    <TextInput placeholder='Password' style={styles.textinputP}></TextInput>
+                    <Button title='Login' color='#A7AAB5'
                     onPress={press}
                     />
                 </View>
